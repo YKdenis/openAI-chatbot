@@ -1,0 +1,98 @@
+.header {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	height: 12.5vh;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	padding: 0 1rem;
+}
+
+.navLinkContainer {
+	display: flex;
+}
+
+.navLinkContainer a,
+.navLinkAside a {
+	display: block;
+	color: var(--secondary-color);
+	font-weight: bold;
+	margin-left: 1.5rem;
+	transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover,
+.navLink:active {
+	color: var(--tertiary-color);
+}
+
+/* Hamburger Menu CSS */
+
+.hamburgerButton {
+	display: none;
+	height: 50px;
+	width: 50px;
+	color: var(--text-color);
+	font-size: 2rem;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+}
+
+.navLinkAside {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	transform: translate(100%);
+	background-color: var(--primary-color);
+	padding: 1rem;
+	z-index: 999;
+	transition: 0.5s ease-in-out transform;
+}
+
+.navLinkAside a {
+	font-size: 1.6rem;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.closeButton {
+	position: fixed;
+	align-self: unset;
+	top: 1.5rem;
+	right: 1.5rem;
+	font-size: 2rem;
+	color: var(--text-color);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s ease-in-out transform;
+}
+
+.close:hover {
+	transform: rotate(360deg);
+}
+
+@media (max-width: 750px) {
+	.header h1 {
+		font-size: 1.6rem;
+		padding: 1rem 0;
+	}
+	.hamburgerButton {
+		display: block;
+	}
+	.navLinkContainer {
+		display: none;
+	}
+
+	.navLinkAside {
+		display: flex;
+	}
+}

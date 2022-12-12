@@ -1,0 +1,41 @@
+:root {
+	--primary-color: rgb(18, 18, 18);
+	--secondary-color: MediumSeaGreen;
+	--tertiary-color: darkSlateGray;
+	--text-color: MintCream;
+	--bg-color: rgb(33, 33, 33);
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font: 1rem Inconsolata, monospace;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+	height: 100vh;
+}
+
+body {
+	display: grid;
+	grid-template-areas: 'header' 'messages' 'from';
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+	body {
+		color: white;
+		background: black;
+	}
+}

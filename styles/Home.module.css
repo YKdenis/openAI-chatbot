@@ -1,0 +1,40 @@
+.messages {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 75vh;
+}
+
+.form {
+	height: 12.5vh;
+	background-color: var(--primary-color);
+	/* border-top: var(--secondary-color) solid 2px; */
+	padding: 1rem;
+}
+
+.form form {
+	display: flex;
+	margin-top: 0.5rem;
+}
+
+.form input {
+	display: block;
+	padding: 0.5rem;
+	width: 100%;
+	border: none;
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+
+.form button {
+	display: block;
+	color: var(--text-color);
+	background-color: var(--secondary-color);
+	border: none;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	font-size: 1.4rem;
+	padding: 1rem;
+}
