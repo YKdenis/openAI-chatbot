@@ -7,7 +7,7 @@ const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
 	const completion = await openai.createCompletion({
-		model: 'text-davinci-002',
+		model: 'text-davinci-003',
 		prompt:
 			'The following is a conversation with an AI assistant named Chiddy. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: My name is Chiddy, I am an AI created by OpenAI. How can I help you today?\nHuman: ' +
 			req.body.message +
