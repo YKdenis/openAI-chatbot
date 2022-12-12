@@ -6,7 +6,6 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export default async function handler(req, res) {
-	console.log(req.body);
 	const completion = await openai.createCompletion({
 		model: 'text-davinci-002',
 		prompt:
@@ -14,7 +13,7 @@ export default async function handler(req, res) {
 			req.body.message +
 			'\nAI: ',
 		temperature: 0.7,
-		max_tokens: 200,
+		max_tokens: 400,
 		top_p: 1,
 		frequency_penalty: 0,
 		presence_penalty: 0.6,
